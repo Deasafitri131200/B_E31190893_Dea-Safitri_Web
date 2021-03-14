@@ -1,0 +1,58 @@
+<?php
+class item_produk{
+	public $ukuran;
+	public $warna;
+	public  $nama;
+	
+	public function Ukuran(){
+		$Ukuran = $this -> ukuran;
+		return $Ukuran;
+		}
+	public function Warna(){
+		$Warna = $this -> warna;
+		return $Warna;
+		}
+	public function Nama(){
+		$Nama = $this -> nama;
+		return $Nama;
+		}
+	}
+	
+	class Topi extends item_produk{
+		private $model;
+		public function Model_Topi(){
+			$Model_Topi = $this -> model;
+			return $Model_Topi; 
+			}
+		}
+		
+	class Celana extends item_produk{
+		private $tipe;
+		private $model;
+		public function Tipe_Celana(){
+			$Tipe_Celana = $this -> tipe;
+			return $Tipe_Celana;
+			}
+		public function Model_Celana(){
+			$Model_Celana = $this -> model;
+			return $Model_Celana;
+			}
+		}
+		
+	class Baju extends item_produk{
+		private $tipe;
+		public function Tipe_Baju(){
+			$Tipe_Baju = $this -> tipe;
+			return $Tipe_Baju;
+			}
+		}
+
+$Beli_Topi = new item_produk();
+
+$Beli_Topi -> ukuran =" XL";
+$Beli_Topi -> warna =" Purple";
+$Beli_Topi -> nama =" Toptop";
+$Beli_Produk -> model ="Beret Hat/Newsboy Capl";
+
+echo $Beli_Topi -> Model_Topi();
+?>
